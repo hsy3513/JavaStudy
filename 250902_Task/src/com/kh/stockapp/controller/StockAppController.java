@@ -1,20 +1,31 @@
 package com.kh.stockapp.controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.kh.stockapp.model.vo.Customer;
 
 public class StockAppController {
-	private Customer ctm;
+	private Map<String, Customer> cusData = new HashMap<>();
+
+	public StockAppController() {
+		super();
+	}
+
+	public StockAppController(String id, Customer ctm) {
+		super();
+		
+		cusData.put(id, ctm);
+		
+	}
+
 	
-	public StockAppController(String pw) {
-		this.ctm = new Customer(pw);
+	public Map<String, Customer> getCusData() {
+		return cusData;
 	}
 
-	public Customer getCtm() {
-		return ctm;
-	}
-
-	public void setCtm(Customer ctm) {
-		this.ctm = ctm;
+	public void setCusData(Map<String, Customer> cusData) {
+		this.cusData = cusData;
 	}
 		
 }

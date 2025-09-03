@@ -1,8 +1,7 @@
 package com.kh.stockapp.model.vo;
 
 public class Customer {
-	private String pw;
-	
+	private String pw;	
 	
 	public Customer() {
 		super();
