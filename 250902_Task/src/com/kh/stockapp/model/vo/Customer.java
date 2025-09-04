@@ -1,6 +1,8 @@
 package com.kh.stockapp.model.vo;
 
-public class Customer {
+import java.io.Serializable;
+
+public class Customer implements Serializable {
 	private String pw;	
 	
 	public Customer() {
@@ -19,7 +21,5 @@ public class Customer {
 	public void setPw(String pw) {
 		this.pw = pw;
 	}
-	
-	
 
 }
